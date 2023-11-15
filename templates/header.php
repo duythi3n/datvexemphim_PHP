@@ -22,10 +22,10 @@
 
 <!-- Header Section Begin -->
 <header class="header">
-    <div class="header__top bg-light">
+    <div class="header__top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-7 bg-dark">
+                <div class="col-lg-6 col-md-7">
 
                 </div>
                 <?php

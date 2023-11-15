@@ -24,6 +24,9 @@ require_once('config/db_connect.php');
         .part-line {
             margin: 10px 0;
         }
+        .left {
+            background-color: #A9A9A9;
+        }
 
     </style>
 
@@ -38,7 +41,7 @@ include("templates/header.php");
 <div class="container">
     <div class="row">
 
-        <div class="col-md-3">
+        <div class="col-md-3 left rounded">
 
             <div class="list-group">
                 <h3 class="part-line">Tìm kiếm</h3>
@@ -48,44 +51,70 @@ include("templates/header.php");
             <div class="list-group">
                 <h3 class="part-line">Thể loại</h3>
                 <?php
-
-                $query = "
-                    SELECT DISTINCT g.genre_name, genre_id
-                    FROM movies m
-                    JOIN genre g ON m.genre_id = g.id
-                    WHERE m.status = '1'
-                    ORDER BY g.genre_name DESC;
-                ";
-                $statement = $conn->query($query);
-                $result = $statement->fetch_all(MYSQLI_ASSOC);
-                foreach ($result as $row) {
+                    $query = "
+                        SELECT DISTINCT g.genre_name, genre_id
+                        FROM movies m
+                        JOIN genre g ON m.genre_id = g.id
+                        WHERE m.status = '1'
+                        ORDER BY g.genre_name DESC;
+                    ";
+                    $statement = $conn->query($query);
+                    $result = $statement->fetch_all(MYSQLI_ASSOC);
                     ?>
-                    <div class="list-group-item checkbox">
-                        <label><input type="checkbox" class="common_selector genre"
-                                      value="<?php echo $row['genre_id']; ?>"> <?php echo $row['genre_name']; ?></label>
+
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle bg-dark text-white w-100" type="button" id="genreDropdown" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Select Thể loại
+                        </button>
+                        <div class="dropdown-menu w-100" aria-labelledby="genreDropdown">
+                            <?php foreach ($result as $row) { ?>
+                                <a class="dropdown-item">
+                                    <label>
+                                        <input type="checkbox" class="common_selector genre d-none"
+                                            value="<?php echo $row['genre_id']; ?>"> <?php echo $row['genre_name']; ?>
+                                    </label>
+                                </a>
+                            <?php } ?>
+                        </div>
                     </div>
-                    <?php
-                }
-                ?>
+
             </div>
 
             <div class="list-group">
                 <h3 class="part-line">Ngôn ngữ</h3>
                 <?php
-                $query = "
-                    SELECT DISTINCT(language) FROM movies WHERE status = '1' ORDER BY language DESC
+                    $query = "
+                        SELECT DISTINCT(language) FROM movies WHERE status = '1' ORDER BY language DESC
                     ";
-                $statement = $conn->query($query);
-                $result = $statement->fetch_all(MYSQLI_ASSOC);
-                foreach ($result as $row) {
+                    $statement = $conn->query($query);
+                    $result = $statement->fetch_all(MYSQLI_ASSOC);
                     ?>
-                    <div class="list-group-item checkbox">
-                        <label><input type="checkbox" class="common_selector language"
-                                      value="<?php echo $row['language']; ?>"> <?php echo $row['language']; ?></label>
+
+                    <style>
+                        .dropdown-item:hover {
+                            background-color: #f8f9fa; /* Change the background color on hover */
+                            color: #000000; /* Change the text color on hover to black */
+                        }
+                    </style>
+
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle bg-dark text-white w-100" type="button" id="languageDropdown" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Select Language
+                        </button>
+                        <div class="dropdown-menu ư-100" aria-labelledby="languageDropdown">
+                            <?php foreach ($result as $row) { ?>
+                                <a class="dropdown-item">
+                                    <label>
+                                        <input type="checkbox" class="common_selector language d-none"
+                                            value="<?php echo $row['language']; ?>"> <?php echo $row['language']; ?>
+                                    </label>
+                                </a>
+                            <?php } ?>
+                        </div>
                     </div>
-                    <?php
-                }
-                ?>
+
             </div>
         </div>
 
