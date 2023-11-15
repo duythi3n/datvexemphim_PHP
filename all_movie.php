@@ -15,22 +15,9 @@ require_once('config/db_connect.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>All movie page</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
-          rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css" type="  text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <?php
+        include_once ('templates/styles.php')
+    ?>
 
     <style>
 
@@ -115,21 +102,7 @@ include("templates/header.php");
 
 include("templates/footer.php");
 ?>
-<style>
 
-</style>
-
-<!-- Js Plugins -->
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.nicescroll.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jquery.countdown.min.js"></script>
-<script src="assets/js/jquery.slicknav.js"></script>
-<script src="assets/js/mixitup.min.js"></script>
-
-<script src="assets/js/main.js"></script>
 <script src="assets/js/jquery-1.10.2.min.js"></script>
 <script src="assets/js/jquery-ui.js"></script>
 

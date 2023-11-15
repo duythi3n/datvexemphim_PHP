@@ -34,12 +34,6 @@
             include_once("templates/error.php");
             ?>
 
-            <div class="row">
-                <?php
-                include_once("templates/error.php");
-                ?>
-            </div>
-
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
                     <thead>
