@@ -159,7 +159,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Theater</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -185,14 +185,14 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Theater Phone</label>
-                                <input class="form-control" name="theater-phone" id="add_theater_phone"
-                                       placeholder="Enter Theater Phone" value="<?php if(isset($_POST['theater-phone'])) echo $_POST['theater-phone']; ?>">
+                                <input class="form-control" name="phone" id="add_theater_phone"
+                                       placeholder="Enter Theater Phone" value="<?php if(isset($_POST['theater-phone'])) echo $_POST['theater-phone']; ?>" required>
                             </div>
                         </div>
 
 
                         <div class="col-12">
-                            <input type="submit" name="add-theater-btn" id="add-theater-btn" value="submit" class="btn btn-primary">
+                            <input type="submit" name="add-theater-btn" id="add-theater-btn" value="Add Theater" class="btn btn-primary">
                         </div>
 
 

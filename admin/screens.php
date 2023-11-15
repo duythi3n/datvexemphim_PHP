@@ -22,10 +22,10 @@
 
             <div class="row">
                 <div class="col-10">
-                    <h2>Feedback</h2>
+                    <h2>Screen</h2>
                 </div>
                 <div class="col-2">
-                    <button type="button" data-toggle="modal" data-target="#add_show" class="btn btn-primary btn-sm">Add Show</button>
+                    <button type="button" data-toggle="modal" data-target="#add_show" class="btn btn-primary btn-sm">Add Screen</button>
                 </div>
 
 
@@ -38,6 +38,7 @@
                         <th>Id</th>
                         <th>Theater Name</th>
                         <th>Screen Number</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody id="product_list">
@@ -169,7 +170,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Screen</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -182,7 +183,7 @@
                             <div class="form-group">
                                 <label>Theater Name</label>
                                 <select class="form-control category_list" name="theater-id">
-                                    <option>Select Username</option>
+                                    <option>Select Theatername</option>
                                     <?php
                                     $result = mysqli_query($conn, "SELECT * FROM theaters");
                                     if (mysqli_num_rows($result) > 0) {
@@ -199,8 +200,8 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Screen Number</label>
-                                <input class="form-control" name="screen-number" id="screen-number"
-                                       placeholder="Enter Theater Name">
+                                <input class="form-control" name="number" id="screen-number"
+                                       placeholder="Enter Screen Number" required>
                             </div>
                         </div>
 
@@ -208,7 +209,7 @@
                         <input type="hidden" name="add_product" value="1">
                         <div class="col-12">
 
-                            <input type="submit" name="add-screen-btn" id="add-screen-btn" value="submit" class="btn btn-primary">
+                            <input type="submit" name="add-screen-btn" id="add-screen-btn" value="Add Screen" class="btn btn-primary">
                         </div>
 
 

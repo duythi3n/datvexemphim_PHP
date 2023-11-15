@@ -22,7 +22,7 @@
 
             <div class="row">
                 <div class="col-10">
-                    <h2>Feedback</h2>
+                    <h2>Showtime</h2>
                 </div>
                 <div class="col-2">
                     <button type="button" data-toggle="modal" data-target="#add_show" class="btn btn-primary btn-sm">Add Show</button>
@@ -40,6 +40,7 @@
                         <th>Theater Name</th>
                         <th>Screen Number</th>
                         <th>Showtime</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody id="product_list">
@@ -177,7 +178,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Showtime</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -188,9 +189,9 @@
 
                         <div class="col-12">
                             <div class="form-group">
-                                <label>theater-name</label>
+                                <label>Show-name</label>
                                 <select class="form-control" name="theater_name" id="theater_name">
-                                    <option value="">theater name</option>
+                                    <option value="">Show name</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                 </select>
@@ -207,7 +208,7 @@
                         <input type="hidden" name="add_product" value="1">
                         <div class="col-12">
 
-                            <input type="submit" name="addshow" id="addshow" value="submit" class="btn btn-primary">
+                            <input type="submit" name="addshow" id="addshow" value="Add Showtime" class="btn btn-primary">
                         </div>
 
 
