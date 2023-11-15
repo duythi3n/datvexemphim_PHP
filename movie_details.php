@@ -278,7 +278,6 @@ $id = $row['id'];
 include("templates/footer.php");
 ?>
 
-<!-- Gio tét thay này -->
 
 <!-- Js Plugins -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>

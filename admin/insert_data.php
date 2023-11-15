@@ -208,7 +208,7 @@ if (isset($_POST['add_user'])) {
     echo $response;
 
 
-    $insert_record = mysqli_query($conn, "INSERT INTO user (`username`,`email`,`mobile`,`city`,`password`,`image`)VALUES('" . $username . "','" . $email . "','" . $mobile . "','" . $city . "','" . $password . "','" . $filename . "')");
+    $insert_record = mysqli_query($conn, "INSERT INTO users (`username`,`email`,`phone`,`birthday`,`password`,`image`)VALUES('" . $username . "','" . $email . "','" . $mobile . "','" . $city . "','" . $password . "','" . $filename . "')");
     if (!$insert_record) {
         echo "hii";
     } else {
