@@ -299,15 +299,15 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Title</label>
-                                    <input class="form-control" name="movie-title" id="movie-title"
-                                           placeholder="movie name">
+                                    <input class="form-control" name="title" id="movie-title"
+                                           placeholder="Movie Name" required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Director</label>
-                                    <input class="form-control" name="movie-director" id="movie-director"
-                                           placeholder="director name">
+                                    <input class="form-control" name="director" id="movie-director"
+                                           placeholder="Director Name" required>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -336,23 +336,23 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Language</label>
-                                    <input type="text" name="movie-language" id="movie-language" class="form-control"
-                                           placeholder="Enter Language">
+                                    <input type="text" name="language" id="movie-language" class="form-control"
+                                           placeholder="Enter Language" required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Trailer Link</label>
-                                    <input type="text" name="movie-trailer-link" id="movie-trailer-link"
+                                    <input type="text" name="trailer-link" id="movie-trailer-link"
                                            class="form-control"
-                                           placeholder="Enter Trailer">
+                                           placeholder="Enter Trailer" required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea type="text" name="movie-description" id="movie-description"
-                                              class="form-control"></textarea>
+                                    <textarea type="text" name="description" id="movie-description"
+                                              class="form-control" required></textarea>
                                 </div>
                             </div>
                             <div class="col-12">

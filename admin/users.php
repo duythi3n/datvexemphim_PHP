@@ -274,13 +274,13 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <input class="form-control" name="username" id="username" placeholder="user name" required>
+                                    <input class="form-control" name="username" id="username" placeholder="User Name" required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input class="form-control" name="name" id="name" placeholder="user name" required>
+                                    <input class="form-control" name="name" id="name" placeholder="User Name" required>
                                 </div>
                             </div>
                             <div class="col-12">
