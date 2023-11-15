@@ -266,7 +266,7 @@ if (isset($_POST['updateusers'])) {
 if (isset($_POST['deleteuser'])) {
     $id = mysqli_real_escape_string($conn, $_POST['id']);
 
-    $sql = mysqli_query($conn, "DELETE FROM user WHERE id=$id");
+    $sql = mysqli_query($conn, "DELETE FROM users WHERE id=$id");
     echo "<script> window.location.href='users.php' </script>";
 
 
