@@ -27,6 +27,10 @@
                 </div>
             </div>
 
+            <?php
+                include_once ('templates/error.php');
+            ?>
+
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
                     <thead>
@@ -70,10 +74,10 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form id="insert_movie" action="insert_data.php" method="post">
+                                            <form id="delete-feedback" action="exec/feedback.php" method="post">
                                                 <h4> Yor Sour This id "<?php echo $row['id']; ?>" is delete.</h4>
                                                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                                <input type="submit" name="deletefeedback" id="deletefeedback"
+                                                <input type="submit" name="delete-feedback" id="delete-feedback"
                                                        value="OK" class="btn btn-primary">
                                             </form>
 
@@ -95,78 +99,6 @@
     </div>
 
 
-    <!-- Add Product Modal start -->
-    <div class="modal fade" id="add_feedback_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Movie</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form name="myform" id="insert_movie" action="insert_data.php" method="post"
-                          enctype="multipart/form-data" onsubmit="return validateform()">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label>Enter Your Name</label>
-                                        <input type="text" name="name" id="name" class="form-control"
-                                               placeholder="Enter Name">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label>Enter Email</label>
-                                        <input type="text" name="email" class="form-control" id="email"
-                                               placeholder="Enter Name">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label>Massage</label>
-                                        <textarea class="form-control" name="massage" id="massage"
-                                                  placeholder="Enter Your Massage"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <input type="submit" name="add_feedback" class="btn btn-primary add-product"
-                                           value="Add Product">
-                                </div>
-                            </div>
-
-                    </form>
-                    <div id="preview"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Add movie Modal end -->
-
-
     <?php include_once("./templates/footer.php"); ?>
 
 
-    <script>
-        function validateform() {
-            var name = document.myform.name.value;
-            var email = document.myform.email.value;
-            var massage = document.myform.massage.value;
-
-            if (name == "") {
-                alert("Requre Name");
-                return false;
-            } else if (email == "") {
-                alert("Requre email Name");
-                return false;
-            } else if (massage == "") {
-                alert("Requre Massage Name");
-                return false;
-            }
-        }
-
-    </script>

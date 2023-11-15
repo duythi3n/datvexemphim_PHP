@@ -143,9 +143,11 @@ if (isset($_POST['change-password'])) {
 if (isset($_POST['delete-user-btn'])) {
     $id = mysqli_real_escape_string($conn, $_POST['id']);
 
-    $delete_record = mysqli_query($conn, "DELETE FROM `users` WHERE `id` = $id");
-
     try {
+
+        $delete_record = mysqli_query($conn, "DELETE FROM `users` WHERE `id` = $id");
+
+
         if ($delete_record) {
             $msg = "Delete successful";
             $error = 0;

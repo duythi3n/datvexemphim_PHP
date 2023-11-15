@@ -28,12 +28,11 @@
                 <div class="col-2">
                     <button type="button" data-toggle="modal" data-target="#add_theater" class="btn btn-primary btn-sm">Add Theater</button>
                 </div>
-
-                <?php
-                    include_once("templates/error.php");
-                ?>
-
             </div>
+
+            <?php
+                include_once("templates/error.php");
+            ?>
 
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
@@ -99,7 +98,7 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label>Theater Phone</label>
-                                                            <input class="form-control" name="edit-theater-phone" id="edit-theater-phone"
+                                                            <input type="text" pattern="^(0|\+84)[0-9]{9,10}$" class="form-control" name="edit-theater-phone" id="edit-theater-phone"
                                                                    placeholder="Enter Theater Phone" value="<?php echo $row['theater_phone']; ?>">
                                                         </div>
                                                     </div>
@@ -171,21 +170,21 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Theater Name</label>
-                                <input class="form-control" name="theater-name" id="add_theater_name"
-                                       placeholder="Enter Theater Name" value="<?php if(isset($_POST['theater-name'])) echo $_POST['theater-name']; ?>">
+                                <input class="form-control" name="name" id="add_theater_name"
+                                       placeholder="Enter Theater Name" value="<?php if(isset($_POST['theater-name'])) echo $_POST['theater-name']; ?>" required>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Theater Address</label>
-                                <input class="form-control" name="theater-address" id="add_theater_address"
-                                       placeholder="Enter Theater Address" value="<?php if(isset($_POST['theater-address'])) echo $_POST['theater-address']; ?>">
+                                <input class="form-control" name="address" id="add_theater_address"
+                                       placeholder="Enter Theater Address" value="<?php if(isset($_POST['theater-address'])) echo $_POST['theater-address']; ?>" required>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Theater Phone</label>
-                                <input class="form-control" name="phone" id="add_theater_phone"
+                                <input type="text" pattern="^(0|\+84)[0-9]{9,10}$" class="form-control" name="phone" id="add_theater_phone"
                                        placeholder="Enter Theater Phone" value="<?php if(isset($_POST['theater-phone'])) echo $_POST['theater-phone']; ?>" required>
                             </div>
                         </div>
